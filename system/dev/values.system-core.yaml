@@ -1,0 +1,6 @@
+globals:
+  namespacePrefix: system-core
+  nodePool: system
+  project: default
+  server: https://kubernetes.default.svc
+  environment: dev

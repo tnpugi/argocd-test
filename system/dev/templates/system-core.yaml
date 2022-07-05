@@ -11,6 +11,7 @@ spec:
   source:
     path: system/base/core
     repoURL: https://github.com/tnpugi/argocd-test.git
+    targetRevision: HEAD
     helm:
       releaseName: system-core
       values: |
