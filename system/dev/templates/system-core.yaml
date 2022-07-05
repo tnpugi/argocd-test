@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
     namespace: default
   source:
-    path: system/base/core
+    path: system/base/helm-guestbook
     repoURL: https://github.com/tnpugi/argocd-test.git
     targetRevision: HEAD
     helm:
