@@ -14,8 +14,8 @@ spec:
     path: system/base/helm-guestbook
     repoURL: https://github.com/tnpugi/argocd-test.git
     targetRevision: HEAD
-    helm:
-      releaseName: system-core
-      valueFiles:
-      - values.system-core.yaml
+    # helm:
+    #   releaseName: system-core
+    #   valueFiles:
+    #   - values.system-core.yaml
 ---
