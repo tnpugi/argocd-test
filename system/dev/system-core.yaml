@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: system-core
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  source:
+    chart: system/base/core
+    repoURL: https://github.com/tnpugi/argocd-test.git
+    targetRevision: 0.0.1
+    helm:
+      releaseName: system-core
+      parameters:
+        globals:
+          namespacePrefix: system-core
+          nodePool: system
+          project: default
+          server: https://kubernetes.default.svc
+          environment: dev
+---
