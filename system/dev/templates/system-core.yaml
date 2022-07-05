@@ -14,7 +14,7 @@ spec:
     targetRevision: 0.0.1
     helm:
       releaseName: system-core
-      parameters:
+      values: |
         globals:
           namespacePrefix: system-core
           nodePool: system
