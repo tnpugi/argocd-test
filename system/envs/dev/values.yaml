@@ -4,3 +4,16 @@ globals:
   project: default
   server: https://kubernetes.default.svc
   environment: dev
+
+certManager:
+  targetRevision: 1.8.1
+  helmParameters:
+    installCRDs: true
+      nodeSelector:
+        category: {{ .Values.globals.nodePool }}
+      cainjector:
+        nodeSelector:
+        category: {{ .Values.globals.nodePool }}
+      webhook:
+        nodeSelector:
+          category: {{ .Values.globals.nodePool }}
