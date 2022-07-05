@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
     namespace: argocd
   source:
-    chart: system/base/core
+    chart: ./system/base/core
     repoURL: https://github.com/tnpugi/argocd-test.git
     targetRevision: 0.0.1
     helm:
