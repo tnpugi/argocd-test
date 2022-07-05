@@ -5,13 +5,13 @@ globals:
   server: https://kubernetes.default.svc
   environment: base
 
-ingress-nginx:
-  installCRDs: true
-  nodeSelector:
-    category: system
-  cainjector:
-    nodeSelector:
-    category: system
-  webhook:
-    nodeSelector:
-      category: system
+# ingress-nginx:
+#   installCRDs: true
+#   nodeSelector:
+#     category: system
+#   cainjector:
+#     nodeSelector:
+#     category: system
+#   webhook:
+#     nodeSelector:
+#       category: system

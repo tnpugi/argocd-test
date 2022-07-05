@@ -5,13 +5,13 @@ globals:
   server: https://kubernetes.default.svc
   environment: base
 
-cert-manager:
-  installCRDs: true
-  nodeSelector:
-    category: system
-  cainjector:
-    nodeSelector:
-    category: system
-  webhook:
-    nodeSelector:
-      category: system
+# cert-manager:
+#   installCRDs: true
+#   nodeSelector:
+#     category: system
+#   cainjector:
+#     nodeSelector:
+#     category: system
+#   webhook:
+#     nodeSelector:
+#       category: system
