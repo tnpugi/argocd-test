@@ -11,6 +11,8 @@ kind: ApplicationSet
 metadata:
   name: system-core
   namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
 spec:
   generators:
   - git:
