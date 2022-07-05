@@ -12,6 +12,5 @@ spec:
   project: default
   source:
     path: system/base/helm-guestbook
-    repoURL: https://github.com/tnpugi/argocd-test.git
-    targetRevision: HEAD
+    repoURL: https://github.com/tnpugi/argocd-test
 ---
