@@ -14,11 +14,6 @@ spec:
     targetRevision: HEAD
     helm:
       releaseName: system-core
-      values: |
-        globals:
-          namespacePrefix: system-core
-          nodePool: system
-          project: default
-          server: https://kubernetes.default.svc
-          environment: dev
+      valueFiles:
+      - values.system-core.yaml
 ---
