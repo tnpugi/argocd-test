@@ -1,34 +1,16 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: system-core
-  annotations:
-    scheduler.alpha.kubernetes.io/node-selector: category=system
----
-
 apiVersion: argoproj.io/v1alpha1
-kind: ApplicationSet
+kind: Application
 metadata:
-  name: system-core
-  namespace: argocd
   finalizers:
-  - resources-finalizer.argocd.argoproj.io
+    - resources-finalizer.argocd.argoproj.io
+  name: dummy
+  namespace: argocd
 spec:
-  generators:
-  - git:
-      repoURL: https://github.com/tnpugi/argocd-test.git
-      revision: HEAD
-      directories:
-      - path: charts/system-core/*
-  template:
-    metadata:
-      name: '{{path.basename}}'
-    spec:
-      project: default
-      source:
-        repoURL: https://github.com/tnpugi/argocd-test.git
-        targetRevision: HEAD
-        path: '{{path}}'
-      destination:
-        server: https://kubernetes.default.svc
-        namespace: test
+  destination:
+    namespace: test
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    path: charts/system-core/dummy
+    repoURL: 'https://github.com/tnpugi/argocd-test.git'
+    targetRevision: HEAD
