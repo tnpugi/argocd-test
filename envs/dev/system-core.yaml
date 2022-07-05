@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: system-core
+spec:
+  generators:
+  - git:
+      repoURL: https://github.com/tnpugi/argocd-test.git
+      revision: HEAD
+      directories:
+      - path: charts/system-core/*
+  template:
+    metadata:
+      name: '{{path.basename}}'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/tnpugi/argocd-test.git
+        targetRevision: HEAD
+        path: '{{path}}'
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: 'system-core-{{path.basename}}'

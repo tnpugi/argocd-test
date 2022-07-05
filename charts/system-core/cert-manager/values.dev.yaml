@@ -1,0 +1,17 @@
+globals:
+  namespacePrefix: system-core
+  nodePool: system
+  project: default
+  server: https://kubernetes.default.svc
+  environment: dev
+
+cert-manager:
+  installCRDs: true
+  nodeSelector:
+    category: system
+  cainjector:
+    nodeSelector:
+    category: system
+  webhook:
+    nodeSelector:
+      category: system

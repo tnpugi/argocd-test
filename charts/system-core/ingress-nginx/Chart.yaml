@@ -1,6 +1,6 @@
 apiVersion: v2
-name: system-core
-description: system-core
+name: system-ingress-nginx
+description: system-ingress-nginx
 type: application
 version: 0.0.1
 appVersion: "1.0"
