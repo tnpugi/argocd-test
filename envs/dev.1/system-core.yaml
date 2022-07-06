@@ -31,4 +31,4 @@ spec:
               environment: base
       destination:
         server: https://kubernetes.default.svc
-        namespace: 'system-core-{{path.basename}}'
+        namespace: 'syscore-{{path.basename}}'
