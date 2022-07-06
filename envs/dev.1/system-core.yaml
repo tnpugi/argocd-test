@@ -24,7 +24,7 @@ spec:
         helm:
           values: |
             globals:
-              namespace: system-core-{{path.basename}}
+              namespace: syscore-{{path.basename}}
               nodePool: system
               project: default
               server: https://kubernetes.default.svc

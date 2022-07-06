@@ -1,5 +1,5 @@
 globals:
-  namespace: system-core-ingress-nginx
+  namespace: syscore-ingress-nginx
   nodePool: system
   project: default
   server: https://kubernetes.default.svc

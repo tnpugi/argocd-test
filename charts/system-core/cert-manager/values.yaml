@@ -1,5 +1,5 @@
 globals:
-  namespace: system-core-cert-manager
+  namespace: syscore-cert-manager
   nodePool: system
   project: default
   server: https://kubernetes.default.svc
