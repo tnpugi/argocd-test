@@ -1,5 +1,5 @@
 globals:
-  namespacePrefix: system-core
+  namespace: system-core-cert-manager
   nodePool: system
   project: default
   server: https://kubernetes.default.svc
